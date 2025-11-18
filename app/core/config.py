@@ -19,11 +19,11 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
     
     # Настройки CORS - как строка (именно так как в вашем .env)
-    ALLOWED_ORIGINS: str = "http://localhost:3000,http://127.0.0.1:3000"
+    ALLOWED_ORIGINS: List[str] = ["http://localhost:3000", "http://127.0.0.1:3000"]
     
     def get_allowed_origins(self) -> List[str]:
         """Преобразуем строку ALLOWED_ORIGINS в список для CORS."""
-        return [origin.strip() for origin in self.ALLOWED_ORIGINS.split(",")]
+        return self.ALLOWED_ORIGINS
     
     class Config:
         env_file = ".env"

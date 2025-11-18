@@ -12,7 +12,7 @@ app = FastAPI(
 # CORS middleware с исправленными настройками
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.allowed_origins_list,  # Используем свойство, а не поле
+    allow_origins=settings.ALLOWED_ORIGINS, 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -20,7 +20,7 @@ app.add_middleware(
 
 # Подключаем роутеры
 app.include_router(auth.router)
-app.include_router(habits.router)
+# app.include_router(habits.router)
 
 @app.get("/")
 def root():
