@@ -1,0 +1,70 @@
+# ================================
+# Временные файлы и кэш Python
+# ================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ================================
+# Файлы пакетирования и дистрибуции
+# ================================
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ================================
+# Виртуальные окружения
+# ================================
+.env
+.venv
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ================================
+# Логи и базы данных
+# ================================
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Локальная база данных SQLite (если используешь где-то для тестов)
+db.sqlite3
+db.sqlite3-journal
+
+# ================================
+# Настройки редакторов и IDE
+# ================================
+
+# PyCharm / IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
